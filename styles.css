@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: auto;
+}
+
+.container{
+    display: flex;
+    height: 960px;
+    width: 960px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box {
+    width: 6.25%;
+    height: 6.25%;
+    border: 1px solid red;
+}
+
+.open {
+    background-color: black;
+}
