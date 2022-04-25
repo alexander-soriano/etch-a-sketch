@@ -20,13 +20,14 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     
 }
 
 .box {
     width: 6.25%;
     height: 6.25%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .open {

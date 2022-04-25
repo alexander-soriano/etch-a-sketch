@@ -26,7 +26,7 @@ const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', (e) => {
     container.textContent = '';
     do {
-        square = prompt("Enter a number less than or equal 100?", 0);
+        square = prompt("Enter a number less than or equal 100?", 16);
       } while (square > 100 && square);
     createGrid(square*square)
 })
