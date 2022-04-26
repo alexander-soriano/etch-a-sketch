@@ -1,5 +1,10 @@
+:root {
+    --baseColor: black;
+}
 * {
     box-sizing: border-box;
+    width: auto;
+    height: auto;
 }
 
 body {
@@ -31,5 +36,5 @@ button {
 }
 
 .open {
-    background-color: black;
+    background-color: var(--baseColor);
 }
