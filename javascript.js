@@ -23,7 +23,6 @@ function adaptSquare(box){
 
 createGrid(16*16);
 
-
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', (e) => {
     container.textContent = '';

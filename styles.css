@@ -1,5 +1,7 @@
 :root {
     --baseColor: black;
+    --varHeight: auto;
+    --varWidth: auto;
 }
 * {
     box-sizing: border-box;
@@ -30,8 +32,8 @@ button {
 }
 
 .box {
-    width: 6.25%;
-    height: 6.25%;
+    width: var(--varWidth);
+    height: var(--varHeight);
     /*border: 1px solid red;*/
 }
 
