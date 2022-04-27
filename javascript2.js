@@ -32,13 +32,18 @@ createGrid(16);
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', () => {
     container.textContent='';
+    color = 'black'
     createGrid();
+    
 })
 
 // black button
 const blackButton = document.querySelector('.black');
 blackButton.addEventListener('click', () => {
-    color = 'black';
+    color = 'black'
+    const allBox = document.querySelectorAll('.box');
+    allBox.forEach(box => box.removeEventListener('mouseover', randomColor));
+    
 });
 
 // random button
@@ -46,10 +51,50 @@ function randomRGB(){
     return Math.floor(Math.random()*255)
 };
 
-const randomButton = document.querySelector('.random');
-randomButton.addEventListener('click', () => {
+function randomColor(){
     let r = randomRGB();
     let g = randomRGB();
     let b = randomRGB();
     color = `rgb(${r} ${g} ${b} / 100%)`
-})
+};
+
+function rainbow(){
+    const allBox = document.querySelectorAll('.box');
+    allBox.forEach(box => box.addEventListener('mouseover', randomColor));
+}
+
+const randomButton = document.querySelector('.random');
+randomButton.addEventListener('click', () => {
+    randomColor()
+    rainbow()});
+
+//fade button
+
+
+let initial = 100;
+
+function fadeRGB(){
+    
+    if (initial<0){
+        initial = 100;
+    }
+    console.log(initial)
+    initial = initial - 10
+    
+};
+
+function fadeColor(){
+    fadeRGB()
+    let r = 0;
+    let g = 0;
+    let b = 0;
+    color = `rgb(${r} ${g} ${b} / ${initial}%)`
+};
+
+function fading(){
+    const allBox = document.querySelectorAll('.box');
+    allBox.forEach(box => box.addEventListener('mouseover', fadeColor));
+}
+
+const fadeButton = document.querySelector('.fade');
+fadeButton.addEventListener('click', fading);
